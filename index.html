@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="https://cdn.dribbble.com/users/1785752/screenshots/3641233/imc.png">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> B M I </title>
+</head>
+
+<body>
+  <div>
+    <h1>Índice de massa corporal</h1>
+
+    <label for="peso">Peso(kg)</label>
+    <input id="peso" type="number" name="peso">
+    <br><br>
+    <label for="altura">Altura</label>
+    <input type="number" id="altura" name="altura">
+    <br><br>
+
+    <button onclick="calcularImc()">Calcular</button>
+    <br><br><br>
+    
+    <p>Seu índice de massa corporal é .. <span id="resultado"></span></p>
+  </div>
+
+
+    <script>
+        function calcularImc(){
+            const peso = window.document.getElementById('peso').value
+            const altura = window.document.getElementById('altura').value
+            const bmi = peso/(altura**2)
+            document.getElementById('resultado').textContent = bmi.toFixed(2);
+        }
+    </script>
+
+    
+</body>
+</html>
